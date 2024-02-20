@@ -20,10 +20,10 @@ For each assignment, please answer the following:
 
 **Flexibility**
 
-    * New drivers can be easily added.
-    * Since observer pattern is used, we can add and remove numerous observers without changing the core logic of how the notifications are sent to the observers. 
-    * The logic for managing and notifying observers is centralized, ensuring there's no duplicate code scattered across the application. This pattern also ensures that if the notification logic changes, it only needs to be updated in one place. 
-    * The code is very simple with not so many classes and since there is no redundant code and each method is well commented it makes it really easy to understand and maintain for the users.
+* New drivers can be easily added.
++ Since observer pattern is used, we can add and remove numerous observers without changing the core logic of how the notifications are sent to the observers. 
+* The logic for managing and notifying observers is centralized, ensuring there's no duplicate code scattered across the application. This pattern also ensures that if the notification logic changes, it only needs to be updated in one place.
+* The code is very simple with not so many classes and since there is no redundant code and each method is well commented it makes it really easy to understand and maintain for the users.
 
 **Observer Pattern:** 
 
