@@ -18,13 +18,15 @@ https://github.com/praveensingh3123/CS665-Assignment-2
 # Implementation Description
 For each assignment, please answer the following:
 
-- Flexibility
+**Flexibility**
+
     * New drivers can be easily added.
     * Since observer pattern is used, we can add and remove numerous observers without changing the core logic of how the notifications are sent to the observers. 
     * The logic for managing and notifying observers is centralized, ensuring there's no duplicate code scattered across the application. This pattern also ensures that if the notification logic changes, it only needs to be updated in one place. 
     * The code is very simple with not so many classes and since there is no redundant code and each method is well commented it makes it really easy to understand and maintain for the users.
 
 **Observer Pattern:** 
+
 This pattern is used because it allows the Subject(Shop) to send notifications to multiple Observers(Drivers)
 * Instantiate the Shop class.	
 * Create a minimum of 5 Driver objects.	
@@ -32,6 +34,7 @@ This pattern is used because it allows the Subject(Shop) to send notifications t
 * Use the shop's method to broadcast the delivery request and observe notifications being sent to all drivers.**
 
 **UML Diagram Presentation**
+
 The UML diagram offers a visual representation of the system's structure, providing clarity on component relationships 
 and functionalities.
 
@@ -45,19 +48,21 @@ and functionalities.
 - The Driver class implements the Observer interface, signifying its role in receiving notifications.
 
 **Relationships:**
+
 Association and Multiplicity between Interface and Concrete Class:
 The UML illustrates an association between the Subject interface and multiple Observers (i.e., Driver). This is denoted by a line connecting Subject to Observer with a multiplicity of 0..*, indicating that one Subject can notify multiple Observers.
 The Shop class, as a concrete implementation of Subject, inherits this relationship, showing its capability to notify multiple Drivers.
 
-Dependency: The dependency from Observer (i.e., Driver) to DeliveryRequest indicates that the Observer uses DeliveryRequest in one of its methods, establishing a dependency on that class.
-
 **Dependency:**
 
 The Observer (i.e., Driver) has a dependency on DeliveryRequest, indicating that the Observer uses DeliveryRequest in its receiveNotification method.
-The Shop class directly depends on DeliveryRequest as it creates instances of DeliveryRequest. This signifies that changes to DeliveryRequest may impact the Shop class.
-JUnit Test Cases
+The Shop class directly depends on DeliveryRequest as it creates instances of DeliveryRequest. This signifies that changes to DeliveryRequest may impact the Shop class. 
+
+**JUnit Test Cases**
+
 Testing is a crucial aspect of software development. For this task, JUnit 5 has been utilized to create unit tests ensuring the application's functionality.
-Test Structure
+
+**Test Structure**
 - ShopTest: Evaluates the functionalities of the Shop class.
 - testAddObserver(): Verifies correct addition of observers (drivers) to the shop's list.
 - DriverTest: Assesses the functionalities of the Driver class.
