@@ -1,4 +1,5 @@
 package edu.bu.met.cs665.DeliverySystem;
+
 /**
  * Name: Praveen Singh
  * Course: CS-665 Software Designs & Patterns
@@ -9,9 +10,11 @@ package edu.bu.met.cs665.DeliverySystem;
  */
 
 public class Main {
-    // Main method which is the starting point of execution. Here a shop's instance is created and multiple drivers
-    // are instantiated, then we call the function to send delivery request to the drivers.
-    public static void main(String[] args){
+    /**
+     * Main method which is the starting point of execution. Here a shop's instance is created and multiple drivers
+     * are instantiated, then we call the function to send delivery request to the drivers.
+     */
+    public static void main(String[] args) {
         Shop shop = new Shop();
 
         for (int i = 1; i <= 50; i++) {
