@@ -13,7 +13,7 @@ The main objective of the assignment is to design and implement a delivery notif
 Using at least one of the design patterns that were covered in class is a prerequisite for this project. To ensure best practices for software design, the pattern of choice should fit the circumstance as presented.
 
 # GitHub Repository Link:
-https://github.com/{YOUR_USERNAME}/cs-665-assignment-{ASSIGNMENT_NUMBER}
+https://github.com/praveensingh3123/CS665-Assignment-2
 
 # Implementation Description
 For each assignment, please answer the following:
