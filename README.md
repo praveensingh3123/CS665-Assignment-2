@@ -1,13 +1,17 @@
 
 | CS-665       | Software Design & Patterns |
-|--------------|----------------------------|
-| Name         | FIRST_NAME LAST_NAME       |
-| Date         | MM/DD/YYYY                 |
-| Course       | Fall / Spring / Summer     |
-| Assignment # |                            |
+|--------------|--------------------------|
+| Name         | PRAVEEN SINGH            |
+| Date         | 02/16/2024               |
+| Course       | Fall                     |
+| Assignment # | 2                        |
 
 # Assignment Overview
-Please add a paragraph or two overviewing the objectives of the assignment.
+Delivery Notification System - Assignment Overview
+Assignment Objective
+The main objective of the assignment is to design and implement a delivery notification system. A DeliveryRequest, an instance of Shop, and at least five Driver instances should also be generated for testing. Once a delivery request is broadcast, all drivers ought to get delivery-related messages.
+Using at least one of the design patterns that were covered in class is a prerequisite for this project. To ensure best practices for software design, the pattern of choice should fit the circumstance as presented.
+Execution
 
 # GitHub Repository Link:
 https://github.com/{YOUR_USERNAME}/cs-665-assignment-{ASSIGNMENT_NUMBER}
@@ -17,13 +21,63 @@ https://github.com/{YOUR_USERNAME}/cs-665-assignment-{ASSIGNMENT_NUMBER}
 
 For each assignment, please answer the following:
 
-- Explain the level of flexibility in your implementation, including how new object types can
-be easily added or removed in the future.
-- Discuss the simplicity and understandability of your implementation, ensuring that it is
-easy for others to read and maintain.
-- Describe how you have avoided duplicated code and why it is important.
-- If applicable, mention any design patterns you have used and explain why they were
-chosen.
+- Flexibility
+    * New drivers can be easily added.
+    * Since observer pattern is used, we can add and remove numerous observers without changing the core logic of how the notifications are sent to the observers. 
+    * The logic for managing and notifying observers is centralized, ensuring there's no duplicate code scattered across the application. This pattern also ensures that if the notification logic changes, it only needs to be updated in one place. 
+    * Discuss the simplicity and understandability of your implementation, ensuring that it is easy for others to read and maintain.
+
+**Observer Pattern:** This pattern is used because it allows the Subject(Shop) to send notifications to multiple Observers(Drivers)
+* Instantiate the Shop class.	
+* Create a minimum of 5 Driver objects.	
+* Create a DeliveryRequest. 
+* Use the shop's method to broadcast the delivery request and observe notifications being sent to all drivers.**
+
+**UML Diagram Presentation**
+The UML diagram offers a visual representation of the system's structure, providing clarity on component relationships 
+and functionalities.
+
+**Key Components:**
+
+- Class and Interface Distinction: The UML diagram differentiates between tangible classes (Shop, Driver, and DeliveryRequest) and interfaces (Observer and Subject), aiding comprehension of the system's adherence to the Observer design pattern.
+- Interfaces & Implementations:
+- The Subject interface emphasizes fundamental methods like addObserver, removeObserver, and notifyObservers.
+- The Observer interface highlights the receiveNotification method.
+- The Shop class implements the Subject interface, indicating its responsibility for managing and notifying observers.
+- The Driver class implements the Observer interface, signifying its role in receiving notifications.
+
+**Relationships:**
+Association and Multiplicity between Interface and Concrete Class:
+The UML illustrates an association between the Subject interface and multiple Observers (i.e., Driver). This is denoted by a line connecting Subject to Observer with a multiplicity of 0..*, indicating that one Subject can notify multiple Observers.
+The Shop class, as a concrete implementation of Subject, inherits this relationship, showing its capability to notify multiple Drivers.
+
+Dependency: The dependency from Observer (i.e., Driver) to DeliveryRequest indicates that the Observer uses DeliveryRequest in one of its methods, establishing a dependency on that class.
+
+**Dependency:**
+
+The Observer (i.e., Driver) has a dependency on DeliveryRequest, indicating that the Observer uses DeliveryRequest in its receiveNotification method.
+The Shop class directly depends on DeliveryRequest as it creates instances of DeliveryRequest. This signifies that changes to DeliveryRequest may impact the Shop class.
+JUnit Test Cases
+Testing is a crucial aspect of software development. For this task, JUnit 5 has been utilized to create unit tests ensuring the application's functionality.
+Test Structure
+- ShopTest: Evaluates the functionalities of the Shop class.
+- testAddObserver(): Verifies correct addition of observers (drivers) to the shop's list.
+- DriverTest: Assesses the functionalities of the Driver class.
+- testReceiveNotification(): Validates that a driver appropriately receives delivery request notifications. 
+- testNotificationDetails(): Checks if the driver receives accurate details of a delivery request. 
+- testResetNotification(): Examines whether the notification status of a driver can be reset. 
+- testDriverName(): Affirms the correct instantiation of the driver's name.
+
+**Running the Tests:**
+- Ensure JUnit 5 is configured in your project.
+- Using your preferred IDE, navigate to the test directory.
+- Execute the tests, observing the test results indicating the number of tests passed/failed.
+
+**Future Enhancements:**
+- Introduce more specialized driver types.
+- Incorporate features such as driver availability status, priority delivery requests, and additional functionalities.
+
+
 
 
 # Maven Commands
