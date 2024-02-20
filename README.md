@@ -1,33 +1,31 @@
 
 | CS-665       | Software Design & Patterns |
-|--------------|--------------------------|
-| Name         | PRAVEEN SINGH            |
-| Date         | 02/16/2024               |
-| Course       | Fall                     |
-| Assignment # | 2                        |
+|--------------|----------------------------|
+| Name         | PRAVEEN SINGH              |
+| Date         | 02/16/2024                 |
+| Course       | Fall                       |
+| Assignment # | 2                          |
 
 # Assignment Overview
 Delivery Notification System - Assignment Overview
 Assignment Objective
-The main objective of the assignment is to design and implement a delivery notification system. A DeliveryRequest, an instance of Shop, and at least five Driver instances should also be generated for testing. Once a delivery request is broadcast, all drivers ought to get delivery-related messages.
+The main objective of the assignment is to design and implement a delivery notification system. A DeliveryRequest message, an instance of Shop, and at least fifty Driver instances should also be generated for testing. Once a delivery request is broadcast, all drivers ought to get delivery-related messages.
 Using at least one of the design patterns that were covered in class is a prerequisite for this project. To ensure best practices for software design, the pattern of choice should fit the circumstance as presented.
-Execution
 
 # GitHub Repository Link:
 https://github.com/{YOUR_USERNAME}/cs-665-assignment-{ASSIGNMENT_NUMBER}
 
-# Implementation Description 
-
-
+# Implementation Description
 For each assignment, please answer the following:
 
 - Flexibility
     * New drivers can be easily added.
     * Since observer pattern is used, we can add and remove numerous observers without changing the core logic of how the notifications are sent to the observers. 
     * The logic for managing and notifying observers is centralized, ensuring there's no duplicate code scattered across the application. This pattern also ensures that if the notification logic changes, it only needs to be updated in one place. 
-    * Discuss the simplicity and understandability of your implementation, ensuring that it is easy for others to read and maintain.
+    * The code is very simple with not so many classes and since there is no redundant code and each method is well commented it makes it really easy to understand and maintain for the users.
 
-**Observer Pattern:** This pattern is used because it allows the Subject(Shop) to send notifications to multiple Observers(Drivers)
+**Observer Pattern:** 
+This pattern is used because it allows the Subject(Shop) to send notifications to multiple Observers(Drivers)
 * Instantiate the Shop class.	
 * Create a minimum of 5 Driver objects.	
 * Create a DeliveryRequest. 
